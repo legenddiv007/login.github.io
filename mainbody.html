@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+			<head>
+			<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+			<title>Log in Template</title>
+			<style type="text/css">
+			body{
+			color:white;
+			background-image:url('../../Downloads/dd.png');
+			background-size:100% 100%;
+			}
+			input[type=text], [type=password], [type=file]{
+			display:inline-block;
+			border-radius: 15px 15px 15px;
+			text-align:center;
+			}
+			label{
+			width:240px;
+			display:inline-block;
+			text-align:center;
+			font-family:"Times New Roman", Times, serif;
+			font-size:15px;
+			font-weight:bolder;
+			color:white;
+			}
+			button{
+			width:25%;
+			background-color:gray;
+			margin-left:200px;
+			border-radius: 15px 15px 15px;
+			color:navy;
+			}
+			p{
+			color:white;
+			float:right;
+			padding-left:30px;
+			padding-top:5px;
+			font-size:70px;
+			font-family:"Times New Roman", Times, serif;
+		}
+		form{
+			float:left;
+			padding-right:550px;
+		}
+			#wrap{
+			border-style: none;
+				border-color: inherit;
+				border-width: 10px;
+				white-space:nowrap;
+				overflow:hidden;
+				display: inline-block; 
+			}
+			#rem{
+			border-width: 10px;
+			overflow:hidden;
+			display: inline-block; 
+			}
+			#dodo{
+	width:200px;
+	height:300px;
+	position: fixed;
+            /* Fixed/sticky position */
+            bottom: 10px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 7;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: 15px;
+            /* Increase font size */
+   
+
+	}
+			</style>
+			</head>
+			<body>
+				<!--<div class="card card-block justify-content-center" >-->
+				
+				<div id="form">
+				<p >IIITian's Network</p>
+				<form action="/action_page.php">
+				<label for="email">E-mail:</label>
+				  <input type="text" id="email" name="email" placeholder="Enter your E-mail"/><br/>				  
+				  <label for="lname">User name:</label>
+				  <input type="text" id="lname" name="lname" placeholder="Enter your name" /><br/>
+				  <label for="dob">Date of Birth:</label>
+				  <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy"/><br/>
+				  <label for="mno">Mobile no.:</label>
+				  <input type="text" id="mno" name="mno" placeholder="+910000000000"/><br/>
+				  <label for="cname">College name:</label>
+				  <input type="text" id="cname" placeholder="IIIT-ABC" name="cname"/><br/>
+				  <div id="wrap">
+				  <label for="image" id="image">Select Image:</label>
+				  <input type="file" id="wrapper" name="img" placeholer=""/><br/>
+				  </div>
+				  <label for="pwd">Password:</label>
+				  <input type="password" id="pwd" name="pwd" placeholder="min 6 characters"/><br/>
+				  <label for="repwd">Confirm Password:</label>
+				  <input type="password" id="pwd" name="repwd" placeholder="re-type password"/><br/>
+				  <!--  <label for="rem" id="remember">Remember me:</label>-->
+				  <button type="submit">Sign up!</button>
+				  <a ><img id="dodo" src="../login final/Fit-tool (2).png"/></a>
+				</form>
+				</div>
+				
+  </body>
+				
+				</html>
+				
