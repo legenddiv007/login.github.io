@@ -9,46 +9,51 @@
 			<style type="text/css">
 			body{
 			color:white;
-			background-image:url(BACKGROUND.jpg);
+			background-image:url('../../Documents/My Web Sites/dd.jpg');
 			background-size:cover;
 			background-position: center center;
+			background-repeat: no-repeat;
 			background-attachment: fixed;
 			}
 			input[type=text], [type=password], [type=file]{
-			display:inline-block;
+			display:block;
 			border-radius: 15px 15px 15px;
 			text-align:center;
+			position:fixed;
+			margin-left:300px;
 			}
+			.ss-item-required{
+	        margin-top:70px;
+}
 			label{
+			position:fixed;
 			width:240px;
-			display:inline-block;
+			display:block;
 			text-align:center;
 			font-family:"Times New Roman", Times, serif;
-			font-size:15px;
+			font-size:20px;
 			font-weight:bolder;
 			color:white;
 			}
 			button{
-			width:25%;
+			margin-left:210px;
+			position:fixed;
+			width:10%;
 			background-color:gray;
-			margin-left:200px;
 			border-radius: 15px 15px 15px;
 			color:navy;
 			}
 			p{
+			top:0px;
+			left:500px;
+			position:fixed;
 			color:white;
-			float:right;
-			padding-left:30px;
-			padding-top:5px;
-			font-size:70px;
+			font-size:65px;
 			font-family:"Times New Roman", Times, serif;
-		}
-		form{
-			float:left;
-			padding-right:550px;
+			text-decoration:blink;
 		}
 			#wrap{
-			border-style: none;
+				border-style: none;
 				border-color: inherit;
 				border-width: 10px;
 				white-space:nowrap;
@@ -61,13 +66,13 @@
 			display: inline-block; 
 			}
 			#dodo{
-	width:300px;
-	height:400px;
-	position: fixed;
+			width:350px;
+			height:350px;
+			position: fixed;
             /* Fixed/sticky position */
-            bottom: 10px;
+            bottom:0px;
             /* Place the button at the bottom of the page */
-            right: 60px;
+            right: 50px;
             /* Place the button 30px from the right */
             z-index: 7;
             /* Make sure it does not overlap */
@@ -76,46 +81,66 @@
             outline: none;
             /* Remove outline */
             cursor: pointer;
-            /* Add a mouse pointer on hover */
-            padding: 15px;
+            /* Add a mouse pointer on hover 
+            padding: 15px;*/
             /* Some padding */
             border-radius: 10px;
             /* Rounded corners */
             font-size: 15px;
             /* Increase font size */
-   
-
-	}
+			}
 			</style>
+			
 			</head>
 			<body>
 				<!--<div class="card card-block justify-content-center" >-->
-				
-				<div id="form">
 				<p >IIITian's Network</p>
+				<div id="form">
 				<form action="/action_page.php">
+				<div class="ss-item-required">
 				<label for="email">E-mail:</label>
-				  <input type="text" id="email" name="email" placeholder="Enter your E-mail"/><br/>				  
+				  <input type="text" id="email" name="email" placeholder="Enter your E-mail"/><br/><br/>			  
 				  <label for="lname">User name:</label>
-				  <input type="text" id="lname" name="lname" placeholder="Enter your name" /><br/>
+				  <input type="text" id="lname" name="lname" placeholder="Enter your name" /><br/><br/>
 				  <label for="dob">Date of Birth:</label>
-				  <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy"/><br/>
+				  <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy"/><br/><br/>
 				  <label for="mno">Mobile no.:</label>
-				  <input type="text" id="mno" name="mno" placeholder="+910000000000"/><br/>
+				  <input type="text" id="mno" name="mno" placeholder="+910000000000"/><br/><br/>
 				  <label for="cname">College name:</label>
-				  <input type="text" id="cname" placeholder="IIIT-ABC" name="cname"/><br/>
+				  <input type="text" id="cname" placeholder="IIIT-ABC" name="cname"/><br/><br/>
 				  <div id="wrap">
 				  <label for="image" id="image">Select Image:</label>
-				  <input type="file" id="wrapper" name="img" placeholer=""/><br/>
-				  </div>
+				  <input type="file" id="wrapper" name="img" placeholer=""/><br/><br/>
 				  <label for="pwd">Password:</label>
-				  <input type="password" id="pwd" name="pwd" placeholder="min 6 characters"/><br/>
+				  <input type="password" id="pwdi" name="pwd" placeholder="min 6 characters"/><br/><br/>
 				  <label for="repwd">Confirm Password:</label>
-				  <input type="password" id="pwd" name="repwd" placeholder="re-type password"/><br/>
+				  <input type="password" id="repwdi" name="repwd" placeholder="re-type password"/><br/><br/>
 				  <!--  <label for="rem" id="remember">Remember me:</label>-->
-				  <button type="submit">Sign up!</button>
-				  <a ><img id="dodo" src="dodo-removebg-preview.png"/></a>
+				  <button type="submit" onclick="return Validate()">Sign up!</button>
+				  <a ><img id="dodo" src="../../Downloads/dodo-removebg-preview.png"/></a>
+				</div>
+				  </div>
 				</form>
+						<script type="text/javascript">
+					    function Validate() {
+					        var password = document.getElementById("pwdi").value;
+					        var confirmPassword = document.getElementById("repwdi").value;
+					        if (password != confirmPassword) {
+					            alert("Passwords do not match.");
+          					  	return false;
+					        }
+					        	return true;
+					        }
+						function formcheck() {
+					  		var fields = $(".ss-item-required").find("select, textarea, input").serializeArray();
+							$.each(fields, function(i, field) {
+					   		 if (!field.value)
+					     	 alert(field.name + ' is required');
+					   		});
+					  		console.log(fields);
+							}
+						</script>
+						
 				</div>
 				
   </body>
